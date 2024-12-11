@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kesehatan Lingkungan</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link href="css/tailwind-custom.css" rel="stylesheet">
+    <script
+        src="https://cdn.tailwindcss.com/3.4.5?plugins=forms@0.5.7,typography@0.5.13,aspect-ratio@0.4.2,container-queries@0.1.1"></script>
+    <script src="https://ai-public.creatie.ai/gen_page/tailwind-config.min.js" data-color="#1B9AF5"
+        data-border-radius="medium"></script>
+    <link href="../dist/output.css" rel="stylesheet">
+</head>
+
+<body class="bg-blue-50 font-sans">
+    <div class="min-h-screen flex flex-col">
+        <nav class="bg-sky-600 shadow-sm">
+            <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between h-16">
+                    <div class="flex items-center">
+                        <span class="ml-3 text-xl font-semibold text-white">Kesehatan Lingkungan</span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <main class="flex-grow container mx-auto mt-9 px-4 sm:px-6 lg:px-8 py-15">
+            <div class="max-w-7xl mx-auto">
+                <div class="bg-white shadow-sm rounded-lg overflow-hidden">
+                    <div class="p-8">
+                        <h1 class="text-5xl font-bold mb-4 text-sky-500">Hasil Pemeriksaan</h1>
+                        <p class="text-2xl font-medium text-sky-500 mb-4">Informasi Pasien</p>
+                        <!-- Wrapper untuk grid layout -->
+                        <div class="grid grid-cols-[auto,1fr] gap-x-4 gap-y-4">
+                            <!-- Nama Lengkap -->
+                            <h2 class="font-medium text-gray-900">Nama Tenaga Kerja</h2>
+                            <p data-namaLengkap class="font-medium   bg-blue-50 px-3 py-1 rounded">
+                            </p>
+                            <h2 class="font-medium   text-gray-900">Bagian</h2>
+                            <p data-pekerjaan class="font-medium   bg-blue-50 px-3 py-1 rounded">[Hasil Pekerjaan]</p>
+                            <!-- Pekerjaan -->
+                            <h2 class="font-medium   text-gray-900">Pekerjaan</h2>
+                            <p data-pekerjaan class="font-medium   bg-blue-50 px-3 py-1 rounded">[Hasil Pekerjaan]</p>
+                            <h2 class="font-medium   text-gray-900">Tanggal Tes</h2>
+                            <p data-pekerjaan class="font-medium   bg-blue-50 px-3 py-1 rounded">[Hasil Pekerjaan]</p>
+                            <!-- Alamat Email -->
+
+                            <!-- Usia -->
+                            <h2 class="font-medium   text-gray-900">Usia</h2>
+                            <p data-usia class="font-medium   bg-blue-50 px-3 py-1 rounded">[Hasil Usia]</p>
+                            <h2 class="font-medium   text-gray-900">Masa Kerja</h2>
+                            <p data-email class="font-medium   bg-blue-50 px-3 py-1 rounded">[Hasil Alamat Email]</p>
+
+                            <!-- Jenis Kelamin -->
+                            <h2 class="font-medium   text-gray-900">Jenis Kelamin</h2>
+                            <p data-gender class="font-medium   bg-blue-50 px-3 py-1 rounded">[Hasil Jenis Kelamin]
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col md:flex-row md:space-x-4 space-y-4 ml-7 md:space-y-0">
+                        <!-- Card 1 -->
+                        <div class="bg-blue-100 rounded-lg p-6">
+                            <h3 class="font-medium text-sky-600 mb-4 text-2xl">Total Score</h3>
+                            <p id="score" class="font-bold text-9xl text-red-500" data-total-skor>120</p>
+                        </div>
+
+                        <!-- Card 2 -->
+                        <div class="bg-blue-100 rounded-lg p-4">
+                            <h3 class="font-medium text-sky-600 mb-1 text-2xl">Klasifikasi Kelelahan</h3>
+                            <p id="classification" class="font-medium text-4xl text-red-500">Sangat Tinggi</p>
+                            <h3 class="font-medium text-sky-600 mb-1 mt-4 text-2xl">Tindakan Perbaikan</h3>
+                            <p id="action" class="font-medium text-4xl">Diperlukan tindakan menyeluruh sesegera mungkin
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="space-y-4 mt-5 ml-7 mb-7">
+                        <h3 class="font-medium text-2xl text-sky-500">Keterangan Warna</h3>
+
+                        <!-- Rendah -->
+                        <div class="flex items-start space-x-2">
+                            <div class="w-6 h-6 rounded-full bg-green-500 flex-shrink-0"></div>
+                            <p class="flex flex-wrap items-start">
+                                <span class="text-green-500 font-medium">Rendah</span>
+                                <span class="mx-1">=</span>
+                                Belum diperlukan adanya tindakan perbaikan
+                            </p>
+                        </div>
+
+                        <!-- Sedang -->
+                        <div class="flex items-start space-x-2">
+                            <div class="w-6 h-6 rounded-full bg-yellow-500 flex-shrink-0"></div>
+                            <p class="flex flex-wrap items-start">
+                                <span class="text-yellow-500 font-medium">Sedang</span>
+                                <span class="mx-1">=</span>
+                                Mungkin diperlukan tindakan di kemudian hari
+                            </p>
+                        </div>
+
+                        <!-- Tinggi -->
+                        <div class="flex items-start space-x-2">
+                            <div class="w-6 h-6 rounded-full bg-orange-500 flex-shrink-0"></div>
+                            <p class="flex flex-wrap items-start">
+                                <span class="text-orange-500 font-medium">Tinggi</span>
+                                <span class="mx-1">=</span>
+                                Diperlukan tindakan segera
+                            </p>
+                        </div>
+
+                        <!-- Sangat Tinggi -->
+                        <div class="flex items-start space-x-2">
+                            <div class="w-6 h-6 rounded-full bg-red-500 flex-shrink-0"></div>
+                            <p class="flex flex-wrap items-start">
+                                <span class="text-red-500 font-medium">Sangat Tinggi</span>
+                                <span class="mx-1">=</span>
+                                Diperlukan tindakan menyeluruh sesegera mungkin
+                            </p>
+                        </div>
+                        <form onsubmit="saveBioAndProceed(); return false;">
+                            <button id="tesSekarangButton" type="submit"
+                                class="!rounded-full w-1/2 text-white font-bold mt-3 ml-1 py-3 px-3 bg-sky-600 hover:bg-sky-800 shadow-xl">
+                                Kembali ke Halaman Utama
+                            </button>
+                        </form>
+                    </div>
+
+
+
+                </div>
+            </div>
+    </div>
+    </div>
+    </main>
+    <footer class="bg-white mt-12">
+        <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+            <div class="text-center text-sm text-gray-600">
+                <p>© 2024 Tes Pemeriksaan Kelelahan Secara Subyektif. Hak cipta dilindungi undang-undang.</p>
+                <p class="mt-2">Politeknik Kemenkes Makassar Jurusan Kesehatan Lingkungan (D.IV 3A Kelompok XXX)</p>
+            </div>
+        </div>
+    </footer>
+    </div>
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
